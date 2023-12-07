@@ -19,7 +19,7 @@ export default function Slider() {
             animation: true
           });
         }
-      }, 2000);
+      }, 4000);
     
     return () => clearInterval(handleIntervalf);
     }
@@ -61,10 +61,8 @@ export default function Slider() {
   ));
   return (
     <View>
-      <Text>Slider</Text>
       <View>
         <FlatList
-        
           ref={handleref}
           getItemLayout={getItemLayout}
           data={Data}

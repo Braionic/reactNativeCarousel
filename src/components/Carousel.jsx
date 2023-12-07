@@ -6,7 +6,6 @@ export default function Carousel() {
  
   return (
     <View>
-      <Text>Carousel</Text>
      <Slider />
     </View>
   );
