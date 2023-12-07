@@ -22,7 +22,7 @@ export default function Slider() {
             animation: true
           });
         }
-      }, 4000);
+      }, 3000);
     
     return () => clearInterval(handleIntervalf);
     }
