@@ -1,12 +1,15 @@
 import { View, Text, Image, FlatList, Dimensions } from "react-native";
 import React, { useState, useEffect, useRef } from "react";
+import ToggleSwitch from "./Toggle";
 
 export default function Slider() {
   const [currentposition, setcurrentposition] = useState(0);
+  const [toggleValue, setToggleValue] = useState(false);
+
   const handleref = useRef();
 
   useEffect(() => {
-    if(true){
+    if(toggleValue){
       const handleIntervalf = setInterval(() => {
         if (currentposition === Data.length - 1) {
           handleref.current.scrollToIndex({
@@ -85,6 +88,7 @@ export default function Slider() {
       <View style={{ flexDirection: "row", justifyContent: "center" }}>
         {scrollicon}
       </View>
+      <ToggleSwitch toggleValue={toggleValue} setToggleValue={setToggleValue} />
     </View>
   );
 }
